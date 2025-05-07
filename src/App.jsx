@@ -32,11 +32,15 @@ function App() {
 				<section id='core-concepts'>
 					<h2>Core Concepts</h2>
 					<ul>
-						<CoreConcepts
-							img={CORE_CONCEPTS[0].image}
-							title={CORE_CONCEPTS[0].title}
-							description={CORE_CONCEPTS[0].description}
-						/>
+						{CORE_CONCEPTS.map(concept => {
+							return (
+								<CoreConcepts
+									image={concept.image}
+									title={concept.title}
+									description={concept.description}
+								/>
+							)
+						})}
 					</ul>
 				</section>
 			</main>
