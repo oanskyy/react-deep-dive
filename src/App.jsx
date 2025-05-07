@@ -1,16 +1,7 @@
 import CoreConcepts from "./components/CoreConcepts"
 import Header from "./components/Header/Header"
+import TabButton from "./components/TabButton"
 import { CORE_CONCEPTS } from "./data"
-
-export function CoreConcepts({ image, title, description }) {
-	return (
-		<li>
-			<img src={image} alt={title} />
-			<h3>{title}</h3>
-			<p>{description}</p>
-		</li>
-	)
-}
 
 function App() {
 	return (
@@ -30,6 +21,15 @@ function App() {
 							)
 						})}
 					</ul>
+				</section>
+				<section id='examples'>
+					<h2>Examples</h2>
+					<menu>
+						<TabButton>Components</TabButton>
+						<TabButton>JSX</TabButton>
+						<TabButton>Props</TabButton>
+						<TabButton>State</TabButton>
+					</menu>
 				</section>
 			</main>
 		</div>
