@@ -1,7 +1,7 @@
 import CoreConcepts from "./components/CoreConcepts"
 import Header from "./components/Header/Header"
 import TabButton from "./components/TabButton"
-import { CORE_CONCEPTS, EXAMPLES } from "./data"
+import { EXAMPLES } from "./data"
 import { useState } from "react"
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 		console.log(`Active tab: ${selectedTab}`)
 	}
 
-	let tabContent = <p>Please select a topic.</p>
+	let tabContent = <p>Please select a tab.</p>
 	if (activeTab) {
 		tabContent = (
 			<div id='tab-content'>
@@ -31,21 +31,7 @@ function App() {
 		<div>
 			<Header />
 			<main>
-				<section id='core-concepts'>
-					<h2>Core Concepts</h2>
-					<ul>
-						{CORE_CONCEPTS.map(concept => {
-							return (
-								<CoreConcepts
-									key={concept.title}
-									image={concept.image}
-									title={concept.title}
-									description={concept.description}
-								/>
-							)
-						})}
-					</ul>
-				</section>
+				<CoreConcepts />
 				<section id='examples'>
 					<h2>Examples</h2>
 					<menu>
